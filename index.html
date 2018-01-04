@@ -1,0 +1,19 @@
+<script type="text/javascript" src="./data.js"></script>
+<script type="text/javascript" src="./fileSaver.js"></script>
+
+<div style="text-align: center;">
+  <h3>Data Changer</h3>
+  <p>
+    Open Console
+  </p>
+</div>
+
+<script>
+  //make whatever changes you want to make with data
+
+  function createTxtFile(data){
+    var str = JSON.stringify(data, null, 2);
+  	var blob = new Blob([str], {type: "text/plain;charset=utf-8"});
+  	saveAs(blob, "file.txt");
+  }
+</script>
